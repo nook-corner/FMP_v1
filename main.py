@@ -1,7 +1,7 @@
 #main.py
 
 '''
-"The main.py script represents the final version of the project and is responsible for filtering the data and creating a temporary view named 'temp_dividend.' This temporary view will be used to insert data into the table in the subsequent steps of the project."
+main.py: It filters the data and creates a temporary view ,which will be utilized for inserting data into the table in the next step of the project.
 '''
 
 from filter import FilterYear
