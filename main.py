@@ -1,8 +1,20 @@
+#main.py
+
+'''
+"The main.py script represents the final version of the project and is responsible for filtering the data and creating a temporary view named 'temp_dividend.' This temporary view will be used to insert data into the table in the subsequent steps of the project."
+'''
+
 from filter import FilterYear
+
+# Create an instance of the FilterYear class
 
 filter = FilterYear()
 
+# Filter the DataFrame by date using the filter_dataframe_by_date method
+
 df = filter.filter_dataframe_by_date()
+
+# Create a temporary view named "temp_dividend" for the filtered DataFrame
 
 df.createOrReplaceTempView("temp_dividend")
 
@@ -10,6 +22,9 @@ df.createOrReplaceTempView("temp_dividend")
 # Please ensure you are running this code in a Spark cluster or platform like Databricks,
 
 '''
+
+#Example SQL code
+
 # Delete existing records from "raw_dividend" table for the current month.
 
 delete from  viz_sandbox_db.raw_dividend where mnth_id = '${bsns_dt}'
